@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 
 const User = require('../models/user');
@@ -53,3 +54,31 @@ const Donations = {
 };
 
 module.exports = Donations;
+=======
+'use strict';
+
+const Donations = {
+  home: {
+    handler: function(request, h) {
+      return h.view('home', { title: 'Make a Donation' });
+    }
+  },
+  report: {
+    handler: function(request, h) {
+      return h.view('report', {
+        title: 'Donations to Date',
+        donations: this.donations
+      });
+    }
+  },
+  donate: {
+    handler: function(request, h) {
+      const data = request.payload;
+      this.donations.push(data);
+      return h.redirect('/report');
+    }
+  }
+};
+
+module.exports = Donations;
+>>>>>>> 182f41e5dd3a29994700914bf4669b8399493433

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{> mainmenu _id="home" }}
 
 <section class="ui raised segment">
@@ -10,4 +11,25 @@
     <div class="bar"></div>
   </div>
 
+=======
+<nav class="ui inverted menu">
+    <header class="header item"><a href="/"> Donation </a></header>
+    <div class="right menu">
+        <a class="active item" href="/home"> Donate</a>
+        <a class="item" href="/report"> Report</a>
+        <a class="item" href="/logout"> Logout</a>
+    </div>
+</nav>
+
+<section class="ui raised segment">
+
+    {{> donate }}
+
+    <div class="ui  divider"></div>
+
+    <div class="ui teal progress" data-percent="${progress}" id="mainprogress">
+        <div class="bar"></div>
+    </div>
+
+>>>>>>> 182f41e5dd3a29994700914bf4669b8399493433
 </section>
